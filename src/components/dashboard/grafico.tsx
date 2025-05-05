@@ -66,7 +66,7 @@ export default function GraficoVotosPorDia() {
           }}
         >
           <Box>
-            <Typography variant="h6" sx={{ fontWeight: 900 }}>
+            <Typography variant="h6" sx={{ fontWeight: 900 }} className='AZUL-PRINCIPAL'>
               VOTOS POR DIA
             </Typography>
             <Typography variant="body2" color="textSecondary">

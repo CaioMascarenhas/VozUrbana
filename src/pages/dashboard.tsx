@@ -17,6 +17,11 @@ import PesquisaCard from "../components/dashboard/pesquisacard";
 import DashboardMetrics from "../components/dashboard/metrics";
 import Grafico from "../components/dashboard/grafico";
 import WorkflowAndProgress from "../components/dashboard/workflow";
+import { useMediaQuery } from "@mui/material";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+
 
 type MenuItem = {
     text: string;
@@ -28,6 +33,7 @@ const Dashboard = () => {
     const [open, setOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const navigate = useNavigate()
+    const isMobile = useMediaQuery("(max-width: 600px)");
 
     const menuItems: MenuItem[] = [
         {
@@ -124,10 +130,10 @@ const Dashboard = () => {
 
                 {/* Rodapé */}
                 <Box textAlign="center" mt="auto">
-                    <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", gap: 1, paddingBottom: 2}}>
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1, paddingBottom: 2 }}>
                         <Typography>Administrador</Typography>
                         <IconButton onClick={() => navigate('/')}>
-                        <LogoutIcon color="error" />
+                            <LogoutIcon color="error" />
 
                         </IconButton>
                     </Box>
@@ -141,9 +147,33 @@ const Dashboard = () => {
 
             {/* <DashboardHome /> */}
 
-            <Grid item container xs={12} sx={{ padding: '20px 40px', borderRight: '1px solid #ccc' }}>
-                <PesquisaCard/>
-                <DashboardMetrics />
+            <Grid item container xs={12} sx={{ padding: isMobile ? '20px 40px' : '25px 150px', borderRight: '1px solid #ccc' }}>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Typography variant="h6" sx={{ fontFamily: 'Mulish', fontWeight: 900, fontSize: 24 }} className="AZUL-PRINCIPAL">
+                            VISÃO GERAL
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography variant="body2" color="textSecondary">
+                            Pesquisas Recentes e infográficos
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <div style={{ display: 'flex', width: '100%', padding: isMobile ? '0' : '5px 100px', position: 'relative' }}>
+
+                    <IconButton sx={{ position: 'absolute', top: '50%', left: '10px' }}>
+                        <ArrowBackIosIcon />
+                    </IconButton>
+
+                    <PesquisaCard />
+                    <DashboardMetrics />
+
+
+                    <IconButton sx={{ position: 'absolute', top: '50%', left: 'calc(100% - 10px)' }}>
+                        <ArrowForwardIosIcon />
+                    </IconButton>
+                </div>
                 <Grafico />
             </Grid>
             {/* <Grid item container xs={4} sx={{ padding: 1 }}>
