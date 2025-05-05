@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Mulish', 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: 'Inter', 'Mulish', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+:root {
+    font-family: 'Inter', 'Mulish', 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.Mulish {
+    font-family: 'Mulish', sans-serif !important
+}
+
+.Inter {
+    font-family: 'Inter', sans-serif !important
+}
+
+.Pacifico {
+    font-family: 'Pacifico', 'Inter', sans-serif !important
+}
+
+.bgBlue {
+    background-color: '#E8F6FB'
+}
+
+.AZUL-PRINCIPAL{
+    background-color: #077ABD;
+}
+
+.LARANJA-PRINCIPAL{
+    color: #F6A01D;
+}
+
+.ALERTA {
+    background-color: #DB3D44;
+}
+
+.VERDE-CLARO {
+    background-color: #A9B667;
+}
+
+.TEXTO {
+    color: #2C3E50;
+}
+
+.CINZA-PRINCIPAL {
+    background-color: #A8A8A8;
+}
+
+.FUNDOSEM-NOME {
+    background-color: #FFEFD8;
+}
