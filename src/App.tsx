@@ -8,7 +8,7 @@ import UserHome from './pages/userHome';
 import Chatbot from './pages/Chatbot';
 import Dashboard from './pages/dashboard';
 import AppLayout from './pages/Layout';
-import Users from './pages/users';
+import Users from './pages/Users';
 import KeyWords from './pages/KeyWords';
 
 
